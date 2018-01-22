@@ -30,8 +30,8 @@ public class GuestbookDao {
 							" values (seq_guestbook_no.nextval, ?, ?, ?, sysdate) ";
 			pstmt = conn.prepareStatement(query);
 
-			pstmt.setString(1, vo.getName()); 
-			pstmt.setString(2, vo.getPassword()); 
+			pstmt.setString(1, vo.getName());
+			pstmt.setString(2, vo.getPassword());
 			pstmt.setString(3, vo.getContent());
 			
 			int count = pstmt.executeUpdate();
